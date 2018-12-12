@@ -1,10 +1,13 @@
 version: 2
 
+defaults: &defaults
+  docker:
+    - image: gaozhi/mysql-client-alpine
+    - image: circleci/mysql:5.6
+
 jobs:
   build:
-    docker:
-      - image: gaozhi/mysql-client-alpine
-      - image: circleci/mysql:5.6
+    <<: *defaults
     steps:
       - run:
           name: Greeting
