@@ -16,3 +16,4 @@ jobs:
           name: Greeting
           command: |
             mysql -u root -h 127.0.0.1  -e 'show databases;'
+
