@@ -16,3 +16,15 @@ jobs:
           name: Greeting
           command: |
             mysql -u root -h 127.0.0.1  -e 'show databases;'
+  two:
+    <<: *defaults
+    steps:
+      - run:
+          name: Greeting
+          command: echo TWO
+
+workflows:
+  version: 2
+  test:
+    - one
+    - two
