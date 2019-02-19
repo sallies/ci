@@ -26,5 +26,6 @@ jobs:
 workflows:
   version: 2
   test:
-    - one
-    - two
+    jobs:
+      - one
+      - two
